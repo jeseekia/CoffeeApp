@@ -5,6 +5,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+
 import java.awt.Font;
 
 public class CoffeeAppWindow {
@@ -48,7 +50,7 @@ public class CoffeeAppWindow {
 		frame.getContentPane().add(orderPanel);
 		orderPanel.setLayout(null);
 		
-		JButton btnSmall = new JButton("SMALL");
+		JToggleButton btnSmall = new JToggleButton("SMALL");
 		btnSmall.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -57,16 +59,16 @@ public class CoffeeAppWindow {
 		btnSmall.setBounds(27, 53, 100, 33);
 		orderPanel.add(btnSmall);
 		
-		JButton btnNewButton = new JButton("ICED COFFEE");
-		btnNewButton.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnNewButton.setBounds(151, 168, 133, 35);
-		orderPanel.add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
+		JToggleButton btnIcedCoffee = new JToggleButton("ICED COFFEE");
+		btnIcedCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
+		btnIcedCoffee.setBounds(151, 168, 133, 35);
+		orderPanel.add(btnIcedCoffee);
+		btnIcedCoffee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		
-		JButton btnCapuccino = new JButton("CAPPUCCINO");
+		JToggleButton btnCapuccino = new JToggleButton("CAPPUCCINO");
 		btnCapuccino.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -75,7 +77,7 @@ public class CoffeeAppWindow {
 		btnCapuccino.setBounds(296, 131, 133, 35);
 		orderPanel.add(btnCapuccino);
 		
-		JButton btnCoffee = new JButton("COFFEE");
+		JToggleButton btnCoffee = new JToggleButton("COFFEE");
 		btnCoffee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -84,7 +86,7 @@ public class CoffeeAppWindow {
 		btnCoffee.setBounds(6, 131, 133, 35);
 		orderPanel.add(btnCoffee);
 		
-		JButton btnMedium = new JButton("MEDIUM");
+		JToggleButton btnMedium = new JToggleButton("MEDIUM");
 		btnMedium.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -102,7 +104,7 @@ public class CoffeeAppWindow {
 		btnCart.setBounds(351, 225, 78, 35);
 		orderPanel.add(btnCart);
 		
-		JButton btnExpresso = new JButton("ESPRESSO");
+		JToggleButton btnExpresso = new JToggleButton("ESPRESSO");
 		btnExpresso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -111,7 +113,7 @@ public class CoffeeAppWindow {
 		btnExpresso.setBounds(151, 131, 133, 35);
 		orderPanel.add(btnExpresso);
 		
-		JButton btnFrappuccino = new JButton("FRAPPUCCINO");
+		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
 		btnFrappuccino.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -120,7 +122,7 @@ public class CoffeeAppWindow {
 		btnFrappuccino.setBounds(6, 168, 133, 35);
 		orderPanel.add(btnFrappuccino);
 		
-		JButton btnLarge = new JButton("LARGE");
+		JToggleButton btnLarge = new JToggleButton("LARGE");
 		btnLarge.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -138,7 +140,7 @@ public class CoffeeAppWindow {
 		btnAdd.setBounds(27, 225, 77, 35);
 		orderPanel.add(btnAdd);
 		
-		JButton btnLatte = new JButton("LATTE");
+		JToggleButton btnLatte = new JToggleButton("LATTE");
 		btnLatte.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
