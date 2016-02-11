@@ -4,8 +4,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+
 import java.awt.Font;
 import javax.swing.JToggleButton;
 
@@ -17,6 +20,9 @@ public class CoffeeAppWindow {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
+		ArrayList<Drink> drinkOrder = new ArrayList<Drink>();
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -50,7 +56,7 @@ public class CoffeeAppWindow {
 		frame.getContentPane().add(orderPanel);
 		orderPanel.setLayout(null);
 		
-		JButton btnSmall = new JButton("SMALL");
+		JToggleButton btnSmall = new JToggleButton("SMALL");
 		btnSmall.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -59,26 +65,34 @@ public class CoffeeAppWindow {
 		btnSmall.setBounds(27, 53, 100, 33);
 		orderPanel.add(btnSmall);
 		
-		JButton btnNewButton = new JButton("ICED COFFEE");
-		btnNewButton.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnNewButton.setBounds(151, 168, 133, 35);
-		orderPanel.add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
+		JToggleButton btnIcedCoffee = new JToggleButton("ICED COFFEE");
+		btnIcedCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
+		btnIcedCoffee.setBounds(151, 168, 133, 35);
+		orderPanel.add(btnIcedCoffee);
+		btnIcedCoffee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		
-		JButton btnCapuccino = new JButton("CAPPUCCINO");
+		JToggleButton btnCapuccino = new JToggleButton("CAPPUCCINO");
+		btnCapuccino.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnCapuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnCapuccino.setBounds(296, 131, 133, 35);
 		orderPanel.add(btnCapuccino);
 		
-		JButton btnCoffee = new JButton("COFFEE");
+		JToggleButton btnCoffee = new JToggleButton("COFFEE");
+		btnCoffee.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnCoffee.setBounds(6, 131, 133, 35);
 		orderPanel.add(btnCoffee);
 		
-		JButton btnMedium = new JButton("MEDIUM");
+		JToggleButton btnMedium = new JToggleButton("MEDIUM");
 		btnMedium.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -96,17 +110,25 @@ public class CoffeeAppWindow {
 		btnCart.setBounds(351, 225, 78, 35);
 		orderPanel.add(btnCart);
 		
-		JButton btnExpresso = new JButton("ESPRESSO");
+		JToggleButton btnExpresso = new JToggleButton("ESPRESSO");
+		btnExpresso.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnExpresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnExpresso.setBounds(151, 131, 133, 35);
 		orderPanel.add(btnExpresso);
 		
-		JButton btnFrappuccino = new JButton("FRAPPUCCINO");
+		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
+		btnFrappuccino.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnFrappuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnFrappuccino.setBounds(6, 168, 133, 35);
 		orderPanel.add(btnFrappuccino);
 		
-		JButton btnLarge = new JButton("LARGE");
+		JToggleButton btnLarge = new JToggleButton("LARGE");
 		btnLarge.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -124,7 +146,11 @@ public class CoffeeAppWindow {
 		btnAdd.setBounds(27, 225, 77, 35);
 		orderPanel.add(btnAdd);
 		
-		JButton btnLatte = new JButton("LATTE");
+		JToggleButton btnLatte = new JToggleButton("LATTE");
+		btnLatte.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnLatte.setBounds(296, 168, 133, 35);
 		orderPanel.add(btnLatte);
