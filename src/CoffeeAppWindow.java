@@ -11,7 +11,10 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 
 import java.awt.Font;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 19c3541f83527addaf7cdf3cf981f17279901bf8
 
 public class CoffeeAppWindow {
 
