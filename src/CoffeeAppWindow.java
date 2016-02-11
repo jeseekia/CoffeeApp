@@ -13,13 +13,12 @@ import javax.swing.JToggleButton;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.JLabel;
 
 
 public class CoffeeAppWindow {
 
 	private JFrame frame;
-	private JTextField txtPleaseSelectYour;
-	private JTextField txtPleaseSelectYour_1;
 
 	/**
 	 * Launch the application.
@@ -62,7 +61,7 @@ public class CoffeeAppWindow {
 		
 		JPanel orderPanel = new JPanel();
 		orderPanel.setForeground(Color.WHITE);
-		orderPanel.setBackground(Color.DARK_GRAY);
+		orderPanel.setBackground(Color.LIGHT_GRAY);
 		orderPanel.setBounds(6, 6, 438, 266);
 		frame.getContentPane().add(orderPanel);
 		orderPanel.setLayout(null);
@@ -169,22 +168,16 @@ public class CoffeeAppWindow {
 		btnLatte.setBounds(296, 182, 133, 35);
 		orderPanel.add(btnLatte);
 		
-		txtPleaseSelectYour = new JTextField();
-		txtPleaseSelectYour.setForeground(Color.DARK_GRAY);
-		txtPleaseSelectYour.setHorizontalAlignment(SwingConstants.CENTER);
-		txtPleaseSelectYour.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
-		txtPleaseSelectYour.setText("PLEASE SELECT YOUR SIZE");
-		txtPleaseSelectYour.setBounds(96, 6, 259, 40);
-		orderPanel.add(txtPleaseSelectYour);
-		txtPleaseSelectYour.setColumns(10);
+		JLabel lblPleaseSelectYour = new JLabel("PLEASE SELECT YOUR SIZE");
+		lblPleaseSelectYour.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
+		lblPleaseSelectYour.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPleaseSelectYour.setBounds(89, 18, 286, 25);
+		orderPanel.add(lblPleaseSelectYour);
 		
-		txtPleaseSelectYour_1 = new JTextField();
-		txtPleaseSelectYour_1.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
-		txtPleaseSelectYour_1.setForeground(Color.DARK_GRAY);
-		txtPleaseSelectYour_1.setHorizontalAlignment(SwingConstants.CENTER);
-		txtPleaseSelectYour_1.setText("PLEASE SELECT YOUR DRINK");
-		txtPleaseSelectYour_1.setBounds(89, 93, 275, 40);
-		orderPanel.add(txtPleaseSelectYour_1);
-		txtPleaseSelectYour_1.setColumns(10);
+		JLabel lblPleaseSelectYour_1 = new JLabel("PLEASE SELECT YOUR DRINK");
+		lblPleaseSelectYour_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPleaseSelectYour_1.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
+		lblPleaseSelectYour_1.setBounds(67, 108, 321, 25);
+		orderPanel.add(lblPleaseSelectYour_1);
 	}
 }
