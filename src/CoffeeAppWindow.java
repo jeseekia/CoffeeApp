@@ -57,6 +57,8 @@ public class CoffeeAppWindow {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel orderPanel = new JPanel();
+		orderPanel.setForeground(Color.WHITE);
+		orderPanel.setBackground(Color.DARK_GRAY);
 		orderPanel.setBounds(6, 6, 438, 266);
 		frame.getContentPane().add(orderPanel);
 		orderPanel.setLayout(null);
