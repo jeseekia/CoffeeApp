@@ -11,14 +11,15 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 
 import java.awt.Font;
-<<<<<<< HEAD
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
-=======
->>>>>>> 19c3541f83527addaf7cdf3cf981f17279901bf8
 
 public class CoffeeAppWindow {
 
 	private JFrame frame;
+	private JTextField txtPleaseSelectYour;
+	private JTextField txtPleaseSelectYour_1;
 
 	/**
 	 * Launch the application.
@@ -61,6 +62,7 @@ public class CoffeeAppWindow {
 		orderPanel.setLayout(null);
 		
 		JToggleButton btnSmall = new JToggleButton("SMALL");
+		btnSmall.setForeground(Color.DARK_GRAY);
 		btnSmall.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -71,7 +73,7 @@ public class CoffeeAppWindow {
 		
 		JToggleButton btnIcedCoffee = new JToggleButton("ICED COFFEE");
 		btnIcedCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnIcedCoffee.setBounds(151, 168, 133, 35);
+		btnIcedCoffee.setBounds(151, 182, 133, 35);
 		orderPanel.add(btnIcedCoffee);
 		btnIcedCoffee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -84,7 +86,7 @@ public class CoffeeAppWindow {
 			}
 		});
 		btnCapuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnCapuccino.setBounds(296, 131, 133, 35);
+		btnCapuccino.setBounds(296, 145, 133, 35);
 		orderPanel.add(btnCapuccino);
 		
 		JToggleButton btnCoffee = new JToggleButton("COFFEE");
@@ -93,10 +95,11 @@ public class CoffeeAppWindow {
 			}
 		});
 		btnCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnCoffee.setBounds(6, 131, 133, 35);
+		btnCoffee.setBounds(6, 145, 133, 35);
 		orderPanel.add(btnCoffee);
 		
 		JToggleButton btnMedium = new JToggleButton("MEDIUM");
+		btnMedium.setForeground(Color.DARK_GRAY);
 		btnMedium.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -120,7 +123,7 @@ public class CoffeeAppWindow {
 			}
 		});
 		btnExpresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnExpresso.setBounds(151, 131, 133, 35);
+		btnExpresso.setBounds(151, 145, 133, 35);
 		orderPanel.add(btnExpresso);
 		
 		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
@@ -129,10 +132,11 @@ public class CoffeeAppWindow {
 			}
 		});
 		btnFrappuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnFrappuccino.setBounds(6, 168, 133, 35);
+		btnFrappuccino.setBounds(6, 182, 133, 35);
 		orderPanel.add(btnFrappuccino);
 		
 		JToggleButton btnLarge = new JToggleButton("LARGE");
+		btnLarge.setForeground(Color.DARK_GRAY);
 		btnLarge.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -156,7 +160,25 @@ public class CoffeeAppWindow {
 			}
 		});
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnLatte.setBounds(296, 168, 133, 35);
+		btnLatte.setBounds(296, 182, 133, 35);
 		orderPanel.add(btnLatte);
+		
+		txtPleaseSelectYour = new JTextField();
+		txtPleaseSelectYour.setForeground(Color.DARK_GRAY);
+		txtPleaseSelectYour.setHorizontalAlignment(SwingConstants.CENTER);
+		txtPleaseSelectYour.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
+		txtPleaseSelectYour.setText("PLEASE SELECT YOUR SIZE");
+		txtPleaseSelectYour.setBounds(96, 6, 259, 40);
+		orderPanel.add(txtPleaseSelectYour);
+		txtPleaseSelectYour.setColumns(10);
+		
+		txtPleaseSelectYour_1 = new JTextField();
+		txtPleaseSelectYour_1.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
+		txtPleaseSelectYour_1.setForeground(Color.DARK_GRAY);
+		txtPleaseSelectYour_1.setHorizontalAlignment(SwingConstants.CENTER);
+		txtPleaseSelectYour_1.setText("PLEASE SELECT YOUR DRINK");
+		txtPleaseSelectYour_1.setBounds(89, 93, 275, 40);
+		orderPanel.add(txtPleaseSelectYour_1);
+		txtPleaseSelectYour_1.setColumns(10);
 	}
 }
