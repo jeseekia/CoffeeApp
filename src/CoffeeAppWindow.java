@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
@@ -17,6 +18,9 @@ public class CoffeeAppWindow {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
+		ArrayList<Drink> drinkOrder = new ArrayList<Drink>();
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
