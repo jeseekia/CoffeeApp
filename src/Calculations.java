@@ -1,30 +1,31 @@
+import java.util.ArrayList;
 
 public class Calculations {
 
-	public static void calculatePrice(Drink drink1) {
-		switch(drink1.getType()) {
+	public static void calculatePrice(String type) {
+		switch(type) {
 			case "Coffee":
-					drink1.setPrice(1.50);
+					Drink.setPrice(1.50);
 					break;
 			case "Latte":
-					drink1.setPrice(2.50);
+					Drink.setPrice(2.50);
 					break;
 			case "Espresso":
-				drink1.setPrice(2.00);
+				Drink.setPrice(2.00);
 					break;
 			case "Cappuccino":
-				drink1.setPrice(2.50);
+				Drink.setPrice(2.50);
 					break;
 		}
 		
 	}
 	
-	public static void sizeUpCharge(Drink drink1) {
-		if(drink1.getSize().equalsIgnoreCase("medium")) {
-			drink1.setPrice(drink1.getPrice() + .50);
+	public static void sizeUpCharge(String size) {
+		if(size.equalsIgnoreCase("medium")) {
+			Drink.setPrice(Drink.getPrice() + .50);
 		}
-		else if(drink1.getSize().equalsIgnoreCase("large")) {
-			drink1.setPrice(drink1.getPrice() + 1.00);
+		else if(size.equalsIgnoreCase("large")) {
+			Drink.setPrice(Drink.getPrice() + 1.00);
 		}
 	}
 	
@@ -32,4 +33,17 @@ public class Calculations {
 		double salesTax = subTotal * .06;
 		return salesTax;
 	}
+	
+//	public static double getSubTotal() {
+//		
+//		ArrayList<Drink> order = Order.getDrinkOrder();
+//		
+//		double subTotal = 0;
+//		
+//		for (int i = 0; i < order.size(); i++) {
+//			//order[i]
+//		}
+//
+//		return subTotal;
+//	}
 }

@@ -8,6 +8,8 @@ public class Drink {
 	public Drink(String drinkSize, String drinkType) {
 		setSize(drinkSize);
 		setType(drinkType);
+		Calculations.calculatePrice(drinkType);
+		Calculations.sizeUpCharge(drinkSize);
 	}
 	
 	public static String getSize() {
@@ -26,7 +28,7 @@ public class Drink {
 		Drink.type = type;
 	}
 	
-	public double getPrice() {
+	public static double getPrice() {
 		return price;
 	}
 	

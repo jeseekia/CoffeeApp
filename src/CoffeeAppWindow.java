@@ -24,9 +24,10 @@ public class CoffeeAppWindow {
 	/**
 	 * Launch the application.
 	 */
+	public static ArrayList<Drink> drinkOrder = new ArrayList<>();
+	
 	public static void main(String[] args) {
 		
-		ArrayList<Drink> drinkOrder = new ArrayList<Drink>();
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,8 +39,11 @@ public class CoffeeAppWindow {
 				}
 			}
 		});
+		
+		
 	}
-
+	
+	
 	/**
 	 * Create the application.
 	 */
