@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.EventQueue;
 
 
@@ -10,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 
 import java.awt.Font;
-import javax.swing.JToggleButton;
+
 
 public class CoffeeAppWindow {
 
