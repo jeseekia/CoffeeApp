@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 
 import javax.swing.JFrame;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -114,23 +115,14 @@ public class CoffeeAppWindow {
 		btnMedium.setBounds(161, 42, 100, 35);
 		orderPanel.add(btnMedium);
 		
-		JButton btnCart = new JButton("CART");
-		btnCart.addActionListener(new ActionListener() {
+		JToggleButton btnEspresso = new JToggleButton("ESPRESSO");
+		btnEspresso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnCart.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnCart.setBounds(351, 225, 78, 35);
-		orderPanel.add(btnCart);
-		
-		JToggleButton btnExpresso = new JToggleButton("ESPRESSO");
-		btnExpresso.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnExpresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnExpresso.setBounds(151, 145, 133, 35);
-		orderPanel.add(btnExpresso);
+		btnEspresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
+		btnEspresso.setBounds(151, 145, 133, 35);
+		orderPanel.add(btnEspresso);
 		
 		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
 		btnFrappuccino.addActionListener(new ActionListener() {
@@ -151,14 +143,6 @@ public class CoffeeAppWindow {
 		btnLarge.setBounds(309, 42, 100, 35);
 		orderPanel.add(btnLarge);
 		
-		JButton btnAdd = new JButton("ADD ");
-		btnAdd.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnAdd.setBounds(27, 225, 77, 35);
-		orderPanel.add(btnAdd);
 		
 		JToggleButton btnLatte = new JToggleButton("LATTE");
 		btnLatte.addActionListener(new ActionListener() {
@@ -168,6 +152,38 @@ public class CoffeeAppWindow {
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnLatte.setBounds(296, 182, 133, 35);
 		orderPanel.add(btnLatte);
+		
+		ButtonGroup sizeGroup = new ButtonGroup();
+		sizeGroup.add(btnSmall);
+		sizeGroup.add(btnMedium);
+		sizeGroup.add(btnLarge);
+		
+		ButtonGroup typeGroup = new ButtonGroup();
+		typeGroup.add(btnLatte);
+		typeGroup.add(btnCapuccino);
+		typeGroup.add(btnEspresso);
+		typeGroup.add(btnFrappuccino);
+		typeGroup.add(btnIcedCoffee);
+		typeGroup.add(btnCoffee);
+		
+		JButton btnAdd = new JButton("ADD ");
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
+		btnAdd.setBounds(27, 225, 77, 35);
+		orderPanel.add(btnAdd);
+		
+		JButton btnCart = new JButton("CART");
+		btnCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCart.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
+		btnCart.setBounds(351, 225, 78, 35);
+		orderPanel.add(btnCart);
+		
 		
 		JLabel lblPleaseSelectYour = new JLabel("PLEASE SELECT YOUR SIZE");
 		lblPleaseSelectYour.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
