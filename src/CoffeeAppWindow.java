@@ -169,6 +169,8 @@ public class CoffeeAppWindow {
 		JButton btnAdd = new JButton("ADD ");
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+
 				String sizeText = null;
 				String typeText = null;
 				
@@ -203,9 +205,7 @@ public class CoffeeAppWindow {
 				else if (btnLatte.isSelected()) {
 					typeText = btnLatte.getText();
 				}
-				
-				
-				
+
 			}
 		});
 		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));

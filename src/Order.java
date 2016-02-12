@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Order {
 	
 	
-	//public static ArrayList<Drink> drinkOrder = new ArrayList<>();
+	private static ArrayList<Drink> drinkOrder = new ArrayList<>();
 	
 	public static Drink createDrink(String drinkSize, String drinkType) {
 		Drink currentDrink = new Drink(drinkSize, drinkType);
@@ -11,12 +11,12 @@ public class Order {
 	}
 	
 	
-	
-	public static ArrayList<Drink> getDrinkOrder(Drink currentDrink) {
-		ArrayList<Drink> drinkOrder = new ArrayList<>();
-		drinkOrder.add(currentDrink);
-		System.out.println(currentDrink);
+	public static ArrayList<Drink> getDrinkOrder() {
 		return drinkOrder;
+	}
+	
+	public static void setDrinkOrder(Drink currentDrink) {
+		drinkOrder.add(currentDrink);
 	}
 	
 }

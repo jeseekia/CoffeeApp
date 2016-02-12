@@ -3,17 +3,24 @@ import java.util.ArrayList;
 public class Calculations {
 
 	public static void calculatePrice(String type) {
-		switch(type) {
-			case "Coffee":
+		
+		switch(type.toLowerCase()) {
+			case "coffee":
 					Drink.setPrice(1.50);
 					break;
-			case "Latte":
+			case "latte":
 					Drink.setPrice(2.50);
 					break;
-			case "Espresso":
+			case "espresso":
 				Drink.setPrice(2.00);
 					break;
-			case "Cappuccino":
+			case "cappuccino":
+				Drink.setPrice(2.50);
+					break;
+			case "frappuccino":
+				Drink.setPrice(2.50);
+					break;
+			case "iced coffee":
 				Drink.setPrice(2.50);
 					break;
 		}
