@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -273,6 +274,8 @@ public class CoffeeAppWindow {
 //		orderPanel.setVisible(true);
 //		cartPanel_1.setVisible(false);
 //		
+		
+		
 		JList orderList = new JList();
 		orderList.setBounds(55, 32, 125, 180);
 		cartPanel_1.add(orderList);
