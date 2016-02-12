@@ -1,39 +1,38 @@
 
 public class Drink {
 
-	private static String size;
-	private static String type;
-	private static double price;
+	private String size;
+	private String type;
+	private double price;
 	
-	public Drink(String drinkSize, String drinkType) {
+	public Drink(String drinkSize, String drinkType, double drinkPrice) {
 		setSize(drinkSize);
 		setType(drinkType);
-		Calculations.calculatePrice(drinkType);
-		Calculations.sizeUpCharge(drinkSize);
+		setPrice(drinkPrice);
 	}
 	
-	public static String getSize() {
+	public String getSize() {
 		return size;
 	}
 	
 	public void setSize(String size) {
-		 Drink.size = size;
+		 this.size = size;
 	}
 	
-	public static String getType() {
+	public  String getType() {
 		return type;
 	}
 	
 	public void setType(String type) {
-		Drink.type = type;
+		this.type = type;
 	}
 	
-	public static double getPrice() {
+	public double getPrice() {
 		return price;
 	}
 	
-	public static void setPrice(double price) {
-		 Drink.price = price;
+	public void setPrice(double price) {
+		 this.price = price;
 	}
 	
 }

@@ -24,7 +24,6 @@ public class CoffeeAppWindow {
 	/**
 	 * Launch the application.
 	 */
-	public static ArrayList<Drink> drinkOrder = new ArrayList<>();
 	
 	public static void main(String[] args) {
 		
@@ -205,7 +204,17 @@ public class CoffeeAppWindow {
 				else if (btnLatte.isSelected()) {
 					typeText = btnLatte.getText();
 				}
-
+				
+				Order.setDrinkOrder(Order.createDrink(sizeText, typeText));
+				
+				
+				
+//				for (int i = 0; i < Order.getDrinkOrder().size(); i++){
+//					String size = Order.getDrinkOrder().get(i).getSize();
+//					String type = Order.getDrinkOrder().get(i).getType();
+//					double price = Order.getDrinkOrder().get(i).getPrice();
+//					System.out.println(size + "  " + type + "  " + price);
+//				}
 			}
 		});
 		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
@@ -215,6 +224,17 @@ public class CoffeeAppWindow {
 		JButton btnCart = new JButton("CART");
 		btnCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				ArrayList<Drink> order = Order.getDrinkOrder();
+				
+				
+				for (int i = 0; i < order.size(); i++){
+					Drink currentDrink = order.get(i);
+					String size = currentDrink.getSize();
+					String type = currentDrink.getType();
+					double price = currentDrink.getPrice();
+					System.out.println(size + "  " + type + "  " + price);
+				}
 			}
 		});
 		btnCart.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));

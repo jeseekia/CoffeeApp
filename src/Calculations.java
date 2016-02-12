@@ -2,38 +2,37 @@ import java.util.ArrayList;
 
 public class Calculations {
 
-	public static void calculatePrice(String type) {
-		
-		switch(type.toLowerCase()) {
+	public static double calculatePrice(String type) {
+		double typePrice = 0;
+		type = type.toLowerCase();
+		switch(type) {
 			case "coffee":
-					Drink.setPrice(1.50);
-					break;
+				typePrice = 1.50;
+				break;
 			case "latte":
-					Drink.setPrice(2.50);
-					break;
+				typePrice = 2.50;
+				break;
 			case "espresso":
-				Drink.setPrice(2.00);
-					break;
+				typePrice = 2.00;
+				break;
 			case "cappuccino":
-				Drink.setPrice(2.50);
-					break;
-			case "frappuccino":
-				Drink.setPrice(2.50);
-					break;
-			case "iced coffee":
-				Drink.setPrice(2.50);
-					break;
+				typePrice = 2.50;
+				break;
 		}
+		return typePrice;
 		
 	}
 	
-	public static void sizeUpCharge(String size) {
+	public static double sizeUpCharge(String size) {
+		double sizePrice = 0;
+		
 		if(size.equalsIgnoreCase("medium")) {
-			Drink.setPrice(Drink.getPrice() + .50);
+			sizePrice = 0.50;
 		}
 		else if(size.equalsIgnoreCase("large")) {
-			Drink.setPrice(Drink.getPrice() + 1.00);
+			sizePrice = 1.00;
 		}
+		return sizePrice;
 	}
 	
 	public static double calculateSalesTax(double subTotal) {

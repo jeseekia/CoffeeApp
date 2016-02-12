@@ -6,7 +6,9 @@ public class Order {
 	private static ArrayList<Drink> drinkOrder = new ArrayList<>();
 	
 	public static Drink createDrink(String drinkSize, String drinkType) {
-		Drink currentDrink = new Drink(drinkSize, drinkType);
+		double drinkPrice = Calculations.calculatePrice(drinkType) + Calculations.sizeUpCharge(drinkSize);
+		
+		Drink currentDrink = new Drink(drinkSize, drinkType, drinkPrice);
 		return currentDrink;
 	}
 	
