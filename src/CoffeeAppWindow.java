@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 
 import javax.swing.JFrame;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -122,14 +123,14 @@ public class CoffeeAppWindow {
 		btnCart.setBounds(351, 225, 78, 35);
 		orderPanel.add(btnCart);
 		
-		JToggleButton btnExpresso = new JToggleButton("ESPRESSO");
-		btnExpresso.addActionListener(new ActionListener() {
+		JToggleButton btnEspresso = new JToggleButton("ESPRESSO");
+		btnEspresso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnExpresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnExpresso.setBounds(151, 145, 133, 35);
-		orderPanel.add(btnExpresso);
+		btnEspresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
+		btnEspresso.setBounds(151, 145, 133, 35);
+		orderPanel.add(btnEspresso);
 		
 		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
 		btnFrappuccino.addActionListener(new ActionListener() {
@@ -167,6 +168,20 @@ public class CoffeeAppWindow {
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnLatte.setBounds(296, 182, 133, 35);
 		orderPanel.add(btnLatte);
+		
+		ButtonGroup sizeGroup = new ButtonGroup();
+		sizeGroup.add(btnSmall);
+		sizeGroup.add(btnMedium);
+		sizeGroup.add(btnLarge);
+		
+		ButtonGroup typeGroup = new ButtonGroup();
+		typeGroup.add(btnLatte);
+		typeGroup.add(btnCapuccino);
+		typeGroup.add(btnEspresso);
+		typeGroup.add(btnFrappuccino);
+		typeGroup.add(btnIcedCoffee);
+		typeGroup.add(btnCoffee);
+		
 		
 		JLabel lblPleaseSelectYour = new JLabel("PLEASE SELECT YOUR SIZE");
 		lblPleaseSelectYour.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
