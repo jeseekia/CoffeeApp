@@ -9,12 +9,14 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JToggleButton;
 
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
+import javax.swing.JList;
 
 
 public class CoffeeAppWindow {
@@ -58,6 +60,10 @@ public class CoffeeAppWindow {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		ButtonGroup sizeGroup = new ButtonGroup();
+		
+		ButtonGroup typeGroup = new ButtonGroup();
 		
 		JPanel orderPanel = new JPanel();
 		orderPanel.setForeground(Color.WHITE);
@@ -151,13 +157,9 @@ public class CoffeeAppWindow {
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnLatte.setBounds(296, 182, 133, 35);
 		orderPanel.add(btnLatte);
-		
-		ButtonGroup sizeGroup = new ButtonGroup();
 		sizeGroup.add(btnSmall);
 		sizeGroup.add(btnMedium);
 		sizeGroup.add(btnLarge);
-		
-		ButtonGroup typeGroup = new ButtonGroup();
 		typeGroup.add(btnLatte);
 		typeGroup.add(btnCapuccino);
 		typeGroup.add(btnEspresso);
@@ -224,7 +226,7 @@ public class CoffeeAppWindow {
 		JButton btnCart = new JButton("CART");
 		btnCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				orderPanel.setVisible(false);
 				ArrayList<Drink> order = Order.getDrinkOrder();
 				
 				
@@ -253,5 +255,34 @@ public class CoffeeAppWindow {
 		lblPleaseSelectYour_1.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
 		lblPleaseSelectYour_1.setBounds(66, 108, 321, 25);
 		orderPanel.add(lblPleaseSelectYour_1);
+		
+		JPanel cartPanel_1 = new JPanel();
+		cartPanel_1.setBounds(0, 0, 450, 278);
+		frame.getContentPane().add(cartPanel_1);
+		cartPanel_1.setLayout(null);
+		
+		JButton btnBack = new JButton("BACK");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				orderPanel.setVisible(true);
+				cartPanel_1.setVisible(false);
+			}
+		});
+		btnBack.setBounds(327, 223, 117, 29);
+		cartPanel_1.add(btnBack);
+//		orderPanel.setVisible(true);
+//		cartPanel_1.setVisible(false);
+//		
+		JList orderList = new JList();
+		orderList.setBounds(55, 32, 125, 180);
+		cartPanel_1.add(orderList);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(21, 223, 167, 29);
+		cartPanel_1.add(textArea);
+		
+		JButton btnPay = new JButton("PAY");
+		btnPay.setBounds(198, 223, 117, 29);
+		cartPanel_1.add(btnPay);
 	}
 }
