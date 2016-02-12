@@ -168,6 +168,42 @@ public class CoffeeAppWindow {
 		JButton btnAdd = new JButton("ADD ");
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String sizeText = null;
+				String typeText = null;
+				
+				
+				if (btnSmall.isSelected()) {
+					sizeText = btnSmall.getText();
+				}
+				else if (btnMedium.isSelected()) {
+					sizeText = btnMedium.getText();
+				}
+				else if (btnLarge.isSelected()) {
+					sizeText = btnLarge.getText();
+				}
+				
+				
+				
+				if (btnCapuccino.isSelected()) {
+					typeText = btnCapuccino.getText();
+				}
+				else if (btnCoffee.isSelected()) {
+					typeText = btnCoffee.getText();
+				}
+				else if (btnEspresso.isSelected()) {
+					typeText = btnEspresso.getText();
+				}
+				else if (btnFrappuccino.isSelected()) {
+					typeText = btnFrappuccino.getText();
+				}
+				else if (btnIcedCoffee.isSelected()) {
+					typeText = btnIcedCoffee.getText();
+				}
+				else if (btnLatte.isSelected()) {
+					typeText = btnLatte.getText();
+				}
+				
+				
 			}
 		});
 		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
