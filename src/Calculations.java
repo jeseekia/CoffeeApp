@@ -18,6 +18,12 @@ public class Calculations {
 			case "cappuccino":
 				typePrice = 2.50;
 				break;
+			case "frappuccino":
+				typePrice = 2.50;
+				break;
+			case "iced coffee":
+				typePrice = 2.00;
+				break;
 		}
 		return typePrice;
 		
