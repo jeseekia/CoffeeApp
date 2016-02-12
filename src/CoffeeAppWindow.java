@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class CoffeeAppWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		DefaultListModel listModel = new DefaultListModel();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -209,7 +211,10 @@ public class CoffeeAppWindow {
 				
 				Order.setDrinkOrder(Order.createDrink(sizeText, typeText));
 				
-				
+//				DefaultListModel list = new DefaultListModel();
+//				for(int i = 0; i < Order.getDrinkOrder().size(); i++) {
+//				list.add(i, Order.getDrinkOrder());
+//				}
 				
 //				for (int i = 0; i < Order.getDrinkOrder().size(); i++){
 //					String size = Order.getDrinkOrder().get(i).getSize();
@@ -235,7 +240,8 @@ public class CoffeeAppWindow {
 					String size = currentDrink.getSize();
 					String type = currentDrink.getType();
 					double price = currentDrink.getPrice();
-					System.out.println(size + "  " + type + "  " + price);
+					listModel.addElement(size + " " + type + " " + price);
+//					System.out.println(size + "  " + type + "  " + price);
 				}
 			}
 		});
@@ -272,8 +278,10 @@ public class CoffeeAppWindow {
 		cartPanel_1.add(btnBack);
 //		orderPanel.setVisible(true);
 //		cartPanel_1.setVisible(false);
-//		
-		JList orderList = new JList();
+		
+//		DefaultListModel listModel = new DefaultListModel();
+		
+		JList orderList = new JList(listModel);
 		orderList.setBounds(55, 32, 125, 180);
 		cartPanel_1.add(orderList);
 		
