@@ -278,17 +278,10 @@ public class CoffeeAppWindow {
 		cartPanel_1.add(btnBack);
 //		orderPanel.setVisible(true);
 //		cartPanel_1.setVisible(false);
-<<<<<<< HEAD
-//		
-		
-		
-		JList orderList = new JList();
-=======
-		
 //		DefaultListModel listModel = new DefaultListModel();
 		
 		JList orderList = new JList(listModel);
->>>>>>> c50d640928e79c9264bb99eec539424fbe5de2eb
+
 		orderList.setBounds(55, 32, 125, 180);
 		cartPanel_1.add(orderList);
 		
