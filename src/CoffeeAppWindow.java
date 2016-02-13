@@ -211,10 +211,6 @@ public class CoffeeAppWindow {
 				
 				Order.setDrinkOrder(Order.createDrink(sizeText, typeText));
 				
-//				DefaultListModel list = new DefaultListModel();
-//				for(int i = 0; i < Order.getDrinkOrder().size(); i++) {
-//				list.add(i, Order.getDrinkOrder());
-//				}
 				
 //				for (int i = 0; i < Order.getDrinkOrder().size(); i++){
 //					String size = Order.getDrinkOrder().get(i).getSize();
@@ -241,7 +237,6 @@ public class CoffeeAppWindow {
 					String type = currentDrink.getType();
 					double price = currentDrink.getPrice();
 					listModel.addElement(size + " " + type + " " + price);
-//					System.out.println(size + "  " + type + "  " + price);
 				}
 			}
 		});
@@ -271,7 +266,6 @@ public class CoffeeAppWindow {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				orderPanel.setVisible(true);
-				cartPanel_1.setVisible(false);
 			}
 		});
 		btnBack.setBounds(327, 223, 117, 29);
