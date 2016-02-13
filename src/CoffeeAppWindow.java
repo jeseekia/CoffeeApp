@@ -287,15 +287,14 @@ public class CoffeeAppWindow {
 						btnPay.setBounds(289, 242, 117, 29);
 						cartPanel_1.add(btnPay);
 						
-						JLabel lblSubtotal = new JLabel("SUBTOTAL");
-						lblSubtotal.setHorizontalAlignment(SwingConstants.CENTER);
-						lblSubtotal.setBounds(137, 214, 101, 16);
-						cartPanel_1.add(lblSubtotal);
-						
 						JLabel lblPleaseReviewYour = new JLabel("PLEASE REVIEW YOUR ORDER");
 						lblPleaseReviewYour.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 						lblPleaseReviewYour.setHorizontalAlignment(SwingConstants.CENTER);
 						lblPleaseReviewYour.setBounds(98, 17, 236, 16);
 						cartPanel_1.add(lblPleaseReviewYour);
+						
+						JButton btnSubtotal = new JButton("SUBTOTAL");
+						btnSubtotal.setBounds(121, 201, 117, 29);
+						cartPanel_1.add(btnSubtotal);
 	}
 }
