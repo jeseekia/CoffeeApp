@@ -268,23 +268,34 @@ public class CoffeeAppWindow {
 				orderPanel.setVisible(true);
 			}
 		});
-		btnBack.setBounds(327, 223, 117, 29);
+		btnBack.setBounds(44, 242, 117, 29);
 		cartPanel_1.add(btnBack);
-//		orderPanel.setVisible(true);
-//		cartPanel_1.setVisible(false);
-//		DefaultListModel listModel = new DefaultListModel();
-		
-		JList orderList = new JList(listModel);
-
-		orderList.setBounds(55, 32, 125, 180);
-		cartPanel_1.add(orderList);
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(21, 223, 167, 29);
-		cartPanel_1.add(textArea);
-		
-		JButton btnPay = new JButton("PAY");
-		btnPay.setBounds(198, 223, 117, 29);
-		cartPanel_1.add(btnPay);
+		//		orderPanel.setVisible(true);
+		//		cartPanel_1.setVisible(false);
+		//		DefaultListModel listModel = new DefaultListModel();
+				
+				JList orderList = new JList(listModel);
+				
+						orderList.setBounds(44, 38, 362, 159);
+						cartPanel_1.add(orderList);
+						
+						JTextArea textArea = new JTextArea();
+						textArea.setBounds(239, 201, 167, 29);
+						cartPanel_1.add(textArea);
+						
+						JButton btnPay = new JButton("PAY");
+						btnPay.setBounds(289, 242, 117, 29);
+						cartPanel_1.add(btnPay);
+						
+						JLabel lblSubtotal = new JLabel("SUBTOTAL");
+						lblSubtotal.setHorizontalAlignment(SwingConstants.CENTER);
+						lblSubtotal.setBounds(137, 214, 101, 16);
+						cartPanel_1.add(lblSubtotal);
+						
+						JLabel lblPleaseReviewYour = new JLabel("PLEASE REVIEW YOUR ORDER");
+						lblPleaseReviewYour.setFont(new Font("Lucida Grande", Font.BOLD, 14));
+						lblPleaseReviewYour.setHorizontalAlignment(SwingConstants.CENTER);
+						lblPleaseReviewYour.setBounds(98, 17, 236, 16);
+						cartPanel_1.add(lblPleaseReviewYour);
 	}
 }
