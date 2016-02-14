@@ -1,3 +1,2 @@
-SMALL   ESPRESSO                 $2.00
-LARGE   CAPPUCCINO               $3.50
-MEDIUM  LATTE                    $3.00
+MEDIUM  ICED COFFEE              $2.50
+SMALL   FRAPPUCCINO              $2.50
