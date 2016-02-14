@@ -27,10 +27,16 @@ import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import java.awt.Insets;
+import java.awt.Component;
+import java.awt.Rectangle;
 
 public class CoffeeAppWindow {
 
 	private JFrame frame;
+	private JTextField subtotalField;
+	private JTextField taxField;
+	private JTextField totalField;
 
 	/**
 	 * Launch the application.
@@ -63,135 +69,130 @@ public class CoffeeAppWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 450, 387);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
-		
 		DefaultListModel<String> listModel = new DefaultListModel<String>();
 		ButtonGroup sizeGroup = new ButtonGroup();
 		ButtonGroup typeGroup = new ButtonGroup();
 
-		
-		
 		JPanel orderPanel = new JPanel();
 		orderPanel.setForeground(Color.WHITE);
 		orderPanel.setBackground(Color.LIGHT_GRAY);
-		orderPanel.setBounds(6, 6, 438, 266);
+		orderPanel.setBounds(6, 6, 438, 359);
 		frame.getContentPane().add(orderPanel);
 		orderPanel.setLayout(null);
 
-		JPanel cartPanel_1 = new JPanel();
-		cartPanel_1.setVisible(false);
-		cartPanel_1.setBounds(0, 0, 450, 278);
-		frame.getContentPane().add(cartPanel_1);
-		cartPanel_1.setLayout(null);
-
-		JList<String> orderList = new JList<String>(listModel);
-		orderList.setFont(new Font("Courier New", Font.PLAIN, 11));
-		orderList.setBounds(44, 38, 362, 159);
-		cartPanel_1.add(orderList);
-		
 		JToggleButton btnSmall = new JToggleButton("SMALL");
+		btnSmall.setBounds(new Rectangle(0, 0, 110, 35));
+		btnSmall.setMargin(new Insets(10, 2, 2, 2));
 		btnSmall.setForeground(Color.DARK_GRAY);
-		btnSmall.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
+		// btnSmall.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		//
+		// }
+		// });
 		btnSmall.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnSmall.setBounds(27, 43, 100, 33);
+		btnSmall.setBounds(27, 61, 100, 33);
 		orderPanel.add(btnSmall);
 
 		JToggleButton btnMedium = new JToggleButton("MEDIUM");
+		btnMedium.setBounds(new Rectangle(0, 0, 110, 35));
+		btnMedium.setMargin(new Insets(10, 2, 2, 2));
 		btnMedium.setForeground(Color.DARK_GRAY);
-		btnMedium.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		// btnMedium.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnMedium.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnMedium.setBounds(161, 42, 100, 35);
+		btnMedium.setBounds(161, 60, 110, 35);
 		orderPanel.add(btnMedium);
 
 		JToggleButton btnLarge = new JToggleButton("LARGE");
+		btnLarge.setBounds(new Rectangle(0, 0, 110, 35));
+		btnLarge.setMargin(new Insets(10, 2, 2, 2));
 		btnLarge.setForeground(Color.DARK_GRAY);
-		btnLarge.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		// btnLarge.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnLarge.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnLarge.setBounds(309, 42, 100, 35);
+		btnLarge.setBounds(309, 60, 100, 35);
 		orderPanel.add(btnLarge);
 
-		
-		
 		JToggleButton btnCoffee = new JToggleButton("COFFEE");
-		btnCoffee.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnCoffee.setMargin(new Insets(10, 2, 2, 2));
+		// btnCoffee.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnCoffee.setBounds(6, 145, 133, 35);
+		btnCoffee.setBounds(6, 165, 133, 35);
 		orderPanel.add(btnCoffee);
 
 		JToggleButton btnEspresso = new JToggleButton("ESPRESSO");
-		btnEspresso.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnEspresso.setMargin(new Insets(10, 2, 2, 2));
+		// btnEspresso.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnEspresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnEspresso.setBounds(151, 145, 133, 35);
+		btnEspresso.setBounds(299, 165, 133, 35);
 		orderPanel.add(btnEspresso);
-		
+
 		JToggleButton btnCappuccino = new JToggleButton("CAPPUCCINO");
-		btnCappuccino.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnCappuccino.setMargin(new Insets(10, 2, 2, 2));
+		// btnCappuccino.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnCappuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnCappuccino.setBounds(296, 145, 133, 35);
+		btnCappuccino.setBounds(148, 165, 145, 35);
 		orderPanel.add(btnCappuccino);
 
 		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
-		btnFrappuccino.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnFrappuccino.setBounds(new Rectangle(150, 0, 0, 0));
+		btnFrappuccino.setMargin(new Insets(10, 2, 2, 2));
+		// btnFrappuccino.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnFrappuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnFrappuccino.setBounds(6, 182, 133, 35);
+		btnFrappuccino.setBounds(148, 202, 145, 35);
 		orderPanel.add(btnFrappuccino);
 
 		JToggleButton btnIcedCoffee = new JToggleButton("ICED COFFEE");
+		btnIcedCoffee.setMargin(new Insets(10, 2, 2, 2));
 		btnIcedCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnIcedCoffee.setBounds(151, 182, 133, 35);
+		btnIcedCoffee.setBounds(6, 202, 133, 35);
 		orderPanel.add(btnIcedCoffee);
-		btnIcedCoffee.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		// btnIcedCoffee.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 
 		JToggleButton btnLatte = new JToggleButton("LATTE");
-		btnLatte.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnLatte.setMargin(new Insets(10, 2, 2, 2));
+		// btnLatte.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent e) {
+		// }
+		// });
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
-		btnLatte.setBounds(296, 182, 133, 35);
+		btnLatte.setBounds(299, 202, 133, 35);
 		orderPanel.add(btnLatte);
-				
-		
+
 		JLabel lblPleaseSelectYour = new JLabel("PLEASE SELECT YOUR SIZE");
 		lblPleaseSelectYour.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
 		lblPleaseSelectYour.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPleaseSelectYour.setBounds(77, 6, 286, 25);
+		lblPleaseSelectYour.setBounds(77, 24, 286, 25);
 		orderPanel.add(lblPleaseSelectYour);
 
 		JLabel lblPleaseSelectYour_1 = new JLabel("PLEASE SELECT YOUR DRINK");
 		lblPleaseSelectYour_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPleaseSelectYour_1.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
-		lblPleaseSelectYour_1.setBounds(66, 108, 321, 25);
+		lblPleaseSelectYour_1.setBounds(66, 128, 321, 25);
 		orderPanel.add(lblPleaseSelectYour_1);
-
 
 		sizeGroup.add(btnSmall);
 		sizeGroup.add(btnMedium);
@@ -203,9 +204,8 @@ public class CoffeeAppWindow {
 		typeGroup.add(btnIcedCoffee);
 		typeGroup.add(btnCoffee);
 
-		
-		
 		JButton btnAdd = new JButton("ADD ");
+		btnAdd.setMargin(new Insets(7, 0, 0, 0));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -245,15 +245,20 @@ public class CoffeeAppWindow {
 			}
 		});
 		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnAdd.setBounds(27, 225, 77, 35);
+		btnAdd.setBounds(155, 259, 133, 40);
 		orderPanel.add(btnAdd);
 
+		JPanel cartPanel_1 = new JPanel();
+		cartPanel_1.setBackground(Color.LIGHT_GRAY);
+		cartPanel_1.setVisible(false);
+		cartPanel_1.setBounds(0, 0, 450, 365);
+		frame.getContentPane().add(cartPanel_1);
+		cartPanel_1.setLayout(null);
 		
 		JButton btnCart = new JButton("CART");
+		btnCart.setMargin(new Insets(7, 0, 0, 0));
 		btnCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				orderPanel.setVisible(false);
-				cartPanel_1.setVisible(true);
 				ArrayList<Drink> order = Order.getDrinkOrder();
 
 				for (int i = 0; i < order.size(); i++) {
@@ -263,16 +268,27 @@ public class CoffeeAppWindow {
 					double price = currentDrink.getPrice();
 					listModel.addElement(Order.formatOrderLines(size, type, Calculations.formatNumber(price)));
 				}
+
+				subtotalField.setText(Calculations.getFormattedSubTotal());
+				taxField.setText(Calculations.getFormattedTax());
+				totalField.setText(Calculations.getFormattedTotal());
+
+				orderPanel.setVisible(false);
+				cartPanel_1.setVisible(true);
 			}
 		});
 		btnCart.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
-		btnCart.setBounds(351, 225, 78, 35);
+		btnCart.setBounds(155, 311, 133, 40);
 		orderPanel.add(btnCart);
 
 		
-		
+
+		JList<String> orderList = new JList<String>(listModel);
+		orderList.setFont(new Font("Courier New", Font.PLAIN, 11));
+		orderList.setBounds(78, 38, 276, 167);
+		cartPanel_1.add(orderList);
+
 		JButton btnBack = new JButton("BACK");
-		btnBack.setRequestFocusEnabled(false);
 		btnBack.setRolloverEnabled(false);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -281,47 +297,41 @@ public class CoffeeAppWindow {
 				listModel.clear();
 			}
 		});
-		btnBack.setBounds(44, 242, 117, 29);
+		btnBack.setBounds(44, 330, 117, 29);
 		cartPanel_1.add(btnBack);
-		
 
 		JButton btnDeleteItem = new JButton("DELETE ITEM");
 		btnDeleteItem.setRolloverEnabled(false);
-		btnDeleteItem.setRequestFocusEnabled(false);
 		btnDeleteItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int index = orderList.getSelectedIndex();
 				if (index < 0) {
 					JOptionPane.showMessageDialog(null, "You must select an item to be deleted.");
-				}
-				else {
+				} else {
 					listModel.removeElementAt(index);
 					Order.getDrinkOrder().remove(index);
+
+					subtotalField.setText(Calculations.getFormattedSubTotal());
+					taxField.setText(Calculations.getFormattedTax());
+					totalField.setText(Calculations.getFormattedTotal());
 				}
 			}
 		});
-		btnDeleteItem.setBounds(121, 201, 117, 29);
+		btnDeleteItem.setBounds(121, 217, 192, 29);
 		cartPanel_1.add(btnDeleteItem);
-		
-
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(239, 201, 167, 29);
-		cartPanel_1.add(textArea);
 
 		JButton btnPay = new JButton("PAY");
 		btnPay.setRolloverEnabled(false);
-		btnPay.setRequestFocusEnabled(false);
 		btnPay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String fName = "receipt.txt";
 
 				Path p = Paths.get(fName);
 
-				//For some reason this feature gets rid of the Jlist when the program goes back to main screen
-				//JOptionPane.showMessageDialog(null, orderList, "Receipt", 1);
-				
-				JOptionPane.showMessageDialog(null, "Thank you!");
-				
+				// For some reason this feature gets rid of the Jlist when the
+				// program goes back to main screen
+				// JOptionPane.showMessageDialog(null, orderList, "Receipt", 1);
+
 				Path absPath = p.toAbsolutePath();
 
 				if (!Files.exists(absPath)) {
@@ -339,34 +349,84 @@ public class CoffeeAppWindow {
 					File receiptTextFile = absPath.toFile();
 
 					writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("receipt.txt"), "utf-8"));
-					
-					for (int i = 0; i < listModel.size(); i++) {
-						writer.write(listModel.elementAt(i).toString()+"\n");
-						Order.getDrinkOrder().remove(0);
+
+					if (listModel.size() == 0 || Order.getDrinkOrder().isEmpty()) {
+						JOptionPane.showMessageDialog(null, "There aren't any items in the order.");
+					} else {
+						JOptionPane.showMessageDialog(null, "Thank you!");
+						for (int i = 0; i < listModel.size(); i++) {
+							writer.write(listModel.elementAt(i).toString() + "\n");
+						}
+						writer.write("\n\n\n\n\n\n\n\n");
+						writer.write("Subtotal:  " + Calculations.getFormattedSubTotal() + "\n");
+						writer.write("Tax:       " + Calculations.getFormattedTax() + "\n");
+						writer.write("Total:     " + Calculations.getFormattedTotal() + "\n");
+
+						orderPanel.setVisible(true);
+						cartPanel_1.setVisible(false);
+						Order.getDrinkOrder().clear();
+						listModel.clear();
+						writer.close();
+
 					}
-					
-					listModel.clear();
-					writer.close();
-					
+
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "File Creation Error!");
 				}
-				
-				orderPanel.setVisible(true);
-				cartPanel_1.setVisible(false);
-				
+
 			}
 		});
-		btnPay.setBounds(289, 242, 117, 29);
+		btnPay.setBounds(289, 330, 117, 29);
 		cartPanel_1.add(btnPay);
 
-		
 		JLabel lblPleaseReviewYour = new JLabel("PLEASE REVIEW YOUR ORDER");
 		lblPleaseReviewYour.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		lblPleaseReviewYour.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPleaseReviewYour.setBounds(98, 17, 236, 16);
 		cartPanel_1.add(lblPleaseReviewYour);
 
-		
+		subtotalField = new JTextField();
+		subtotalField.setBackground(Color.LIGHT_GRAY);
+		subtotalField.setHorizontalAlignment(SwingConstants.LEFT);
+		subtotalField.setEditable(false);
+		subtotalField.setBounds(224, 246, 66, 26);
+		cartPanel_1.add(subtotalField);
+		subtotalField.setColumns(10);
+
+		taxField = new JTextField();
+		taxField.setBackground(Color.LIGHT_GRAY);
+		taxField.setHorizontalAlignment(SwingConstants.LEFT);
+		taxField.setEditable(false);
+		taxField.setColumns(10);
+		taxField.setBounds(224, 272, 66, 26);
+		cartPanel_1.add(taxField);
+
+		totalField = new JTextField();
+		totalField.setBackground(Color.LIGHT_GRAY);
+		totalField.setHorizontalAlignment(SwingConstants.LEFT);
+		totalField.setEditable(false);
+		totalField.setColumns(10);
+		totalField.setBounds(224, 302, 66, 26);
+		cartPanel_1.add(totalField);
+
+		JLabel lblSubtotal = new JLabel("Subtotal:");
+		lblSubtotal.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSubtotal.setBounds(150, 251, 61, 16);
+		cartPanel_1.add(lblSubtotal);
+
+		JLabel lblTax = new JLabel("Tax:");
+		lblTax.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTax.setBounds(150, 277, 61, 16);
+		cartPanel_1.add(lblTax);
+
+		JLabel lblTotal = new JLabel("Total:");
+		lblTotal.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTotal.setBounds(150, 307, 61, 16);
+		cartPanel_1.add(lblTotal);
+
+		JLabel lblNewLabel = new JLabel("--------------------");
+		lblNewLabel.setBounds(144, 292, 160, 16);
+		cartPanel_1.add(lblNewLabel);
+
 	}
 }

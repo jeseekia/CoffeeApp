@@ -1,2 +1,12 @@
-MEDIUM  ICED COFFEE              $2.50
 SMALL   FRAPPUCCINO              $2.50
+
+
+
+
+
+
+
+
+Subtotal:  $2.50
+Tax:       $0.15
+Total:     $2.65
