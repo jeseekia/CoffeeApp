@@ -21,4 +21,8 @@ public class Order {
 		drinkOrder.add(currentDrink);
 	}
 	
+	public static String formatOrderLines (String size, String type, String price) {
+		String formattedLine = String.format("%-8s%-20s%10s", size, type, price);
+		return formattedLine;
+	}
 }

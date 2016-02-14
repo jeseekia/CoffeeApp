@@ -64,8 +64,8 @@ public class Calculations {
 		return subTotal + salesTax;
 	}
 	
-	private String formatNumber(double x) {
-		DecimalFormat formatter = new DecimalFormat("#0.00");
+	public static String formatNumber(double x) {
+		DecimalFormat formatter = new DecimalFormat("$#0.00");
 		String formattedNumber = formatter.format(x);
 		return formattedNumber;
 	}
@@ -75,7 +75,7 @@ public class Calculations {
 	}
 	
 	public String getFormattedTotal() {
-		return formatNumber(calculateSalesTax(getSubTotal()));
+		return formatNumber(getTotal());
 	}
 	
 }
