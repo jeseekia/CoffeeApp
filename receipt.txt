@@ -1,3 +1,18 @@
+<<<<<<< HEAD
 MEDIUM  COFFEE                   $2.00
 SMALL   COFFEE                   $1.50
 LARGE   CAPPUCCINO               $3.50
+=======
+SMALL   FRAPPUCCINO              $2.50
+
+
+
+
+
+
+
+
+Subtotal:  $2.50
+Tax:       $0.15
+Total:     $2.65
+>>>>>>> 67a08f53b5412534a7027b090f1d4c8919d92cb7
