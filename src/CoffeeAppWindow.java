@@ -7,6 +7,15 @@ import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
@@ -18,6 +27,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 
 public class CoffeeAppWindow {
@@ -284,6 +294,41 @@ public class CoffeeAppWindow {
 						cartPanel_1.add(textArea);
 						
 						JButton btnPay = new JButton("PAY");
+						btnPay.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								String fName = "receipt.txt";
+								
+								Path p = Paths.get(fName);
+								
+								JOptionPane.showMessageDialog(null, orderList, "Receipt", 1);
+								
+								Path absPath = p.toAbsolutePath();
+								
+								if (!Files.exists(absPath))
+								{
+									try {
+										Files.createFile(absPath);
+										
+									} catch (IOException e1) {
+										JOptionPane.showMessageDialog(null, "File Creation Error!");
+									}
+								}
+								
+								Writer writer = null;
+								
+								try {
+								File receiptTextFile = absPath.toFile();
+								
+								writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("receipt.txt"), "utf-8"));
+								writer.write(listModel.toString());
+								
+								writer.close();
+								} 
+								catch (IOException e1) {
+									JOptionPane.showMessageDialog(null, "File Creation Error!");
+								}
+							}
+						});
 						btnPay.setBounds(289, 242, 117, 29);
 						cartPanel_1.add(btnPay);
 						
