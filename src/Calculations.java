@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Calculations {
@@ -46,16 +47,35 @@ public class Calculations {
 		return salesTax;
 	}
 	
-//	public static double getSubTotal() {
-//		
-//		ArrayList<Drink> order = Order.getDrinkOrder();
-//		
-//		double subTotal = 0;
-//		
-//		for (int i = 0; i < order.size(); i++) {
-//			//order[i]
-//		}
-//
-//		return subTotal;
-//	}
+	public static double getSubTotal() {
+		ArrayList<Drink> order = Order.getDrinkOrder();
+		double subTotal = 0;
+		
+		for (int i = 0; i < order.size(); i++){
+			Drink currentDrink = order.get(i);
+			subTotal += currentDrink.getPrice();
+		}
+		return subTotal;
+	}
+	
+	public static double getTotal() {
+		double subTotal = getSubTotal();
+		double salesTax = calculateSalesTax(getSubTotal());
+		return subTotal + salesTax;
+	}
+	
+	private String formatNumber(double x) {
+		DecimalFormat formatter = new DecimalFormat("#0.00");
+		String formattedNumber = formatter.format(x);
+		return formattedNumber;
+	}
+	
+	public String getFormattedSubTotal() {
+		return formatNumber(getSubTotal());
+	}
+	
+	public String getFormattedTotal() {
+		return formatNumber(calculateSalesTax(getSubTotal()));
+	}
+	
 }
