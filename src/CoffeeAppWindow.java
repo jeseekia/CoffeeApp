@@ -302,7 +302,8 @@ public class CoffeeAppWindow {
 
 				//For some reason this feature gets rid of the Jlist when the program goes back to main screen
 				//JOptionPane.showMessageDialog(null, orderList, "Receipt", 1);
-
+				JOptionPane.showMessageDialog(null, "Thank you!");
+				
 				Path absPath = p.toAbsolutePath();
 
 				if (!Files.exists(absPath)) {
@@ -325,6 +326,7 @@ public class CoffeeAppWindow {
 						writer.write(listModel.elementAt(i).toString()+"\n");
 						Order.getDrinkOrder().remove(0);
 					}
+					
 					listModel.clear();
 					writer.close();
 					

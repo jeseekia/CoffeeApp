@@ -1,2 +1,3 @@
-SMALL   COFFEE                   $1.50
-LARGE   ICED COFFEE              $3.00
+SMALL   ESPRESSO                 $2.00
+LARGE   COFFEE                   $2.50
+LARGE   CAPPUCCINO               $3.50

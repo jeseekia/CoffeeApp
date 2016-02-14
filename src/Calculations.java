@@ -42,8 +42,8 @@ public class Calculations {
 		return sizePrice;
 	}
 	
-	public static double calculateSalesTax(double subTotal) {
-		double salesTax = subTotal * .06;
+	public static double calculateSalesTax() {
+		double salesTax = getSubTotal() * .06;
 		return salesTax;
 	}
 	
@@ -60,7 +60,7 @@ public class Calculations {
 	
 	public static double getTotal() {
 		double subTotal = getSubTotal();
-		double salesTax = calculateSalesTax(getSubTotal());
+		double salesTax = calculateSalesTax();
 		return subTotal + salesTax;
 	}
 	
@@ -76,6 +76,10 @@ public class Calculations {
 	
 	public String getFormattedTotal() {
 		return formatNumber(getTotal());
+	}
+	
+	public String getFormattedTax() {
+		return formatNumber(calculateSalesTax());
 	}
 	
 }
