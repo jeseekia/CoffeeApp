@@ -70,15 +70,15 @@ public class Calculations {
 		return formattedNumber;
 	}
 	
-	public String getFormattedSubTotal() {
+	public static String getFormattedSubTotal() {
 		return formatNumber(getSubTotal());
 	}
 	
-	public String getFormattedTotal() {
+	public static String getFormattedTotal() {
 		return formatNumber(getTotal());
 	}
 	
-	public String getFormattedTax() {
+	public static String getFormattedTax() {
 		return formatNumber(calculateSalesTax());
 	}
 	

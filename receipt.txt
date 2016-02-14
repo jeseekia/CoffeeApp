@@ -1,3 +1,12 @@
-SMALL   ESPRESSO                 $2.00
-LARGE   CAPPUCCINO               $3.50
-MEDIUM  LATTE                    $3.00
+SMALL   LATTE                    $2.50
+
+
+
+
+
+
+
+
+Subtotal:  $2.50
+Tax:       $0.15
+Total:     $2.65
