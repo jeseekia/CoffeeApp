@@ -285,7 +285,24 @@ public class CoffeeAppWindow {
 		cartPanel_1.add(btnBack);
 		
 
-	
+		JButton btnDeleteItem = new JButton("DELETE ITEM");
+		btnDeleteItem.setRolloverEnabled(false);
+		btnDeleteItem.setRequestFocusEnabled(false);
+		btnDeleteItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int index = orderList.getSelectedIndex();
+				if (index < 0) {
+					JOptionPane.showMessageDialog(null, "You must select an item to be deleted.");
+				}
+				else {
+					listModel.removeElementAt(index);
+					Order.getDrinkOrder().remove(index);
+				}
+			}
+		});
+		btnDeleteItem.setBounds(121, 201, 117, 29);
+		cartPanel_1.add(btnDeleteItem);
+		
 
 		JTextArea textArea = new JTextArea();
 		textArea.setBounds(239, 201, 167, 29);
@@ -302,6 +319,7 @@ public class CoffeeAppWindow {
 
 				//For some reason this feature gets rid of the Jlist when the program goes back to main screen
 				//JOptionPane.showMessageDialog(null, orderList, "Receipt", 1);
+				
 				JOptionPane.showMessageDialog(null, "Thank you!");
 				
 				Path absPath = p.toAbsolutePath();
@@ -349,10 +367,6 @@ public class CoffeeAppWindow {
 		lblPleaseReviewYour.setBounds(98, 17, 236, 16);
 		cartPanel_1.add(lblPleaseReviewYour);
 
-		JButton btnSubtotal = new JButton("SUBTOTAL");
-		btnSubtotal.setRolloverEnabled(false);
-		btnSubtotal.setRequestFocusEnabled(false);
-		btnSubtotal.setBounds(121, 201, 117, 29);
-		cartPanel_1.add(btnSubtotal);
+		
 	}
 }
