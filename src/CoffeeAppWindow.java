@@ -77,6 +77,7 @@ public class CoffeeAppWindow {
 		ButtonGroup sizeGroup = new ButtonGroup();
 		ButtonGroup typeGroup = new ButtonGroup();
 
+//This is where the order panel is created. The order panel shows the users the different options for both the type of drink that they can order and the size of that drink.
 		JPanel orderPanel = new JPanel();
 		orderPanel.setForeground(Color.WHITE);
 		orderPanel.setBackground(Color.LIGHT_GRAY);
@@ -84,6 +85,7 @@ public class CoffeeAppWindow {
 		frame.getContentPane().add(orderPanel);
 		orderPanel.setLayout(null);
 
+		//When this button is pressed the getSize method returns Small.
 		JToggleButton btnSmall = new JToggleButton("SMALL");
 		btnSmall.setBounds(new Rectangle(0, 0, 110, 35));
 		btnSmall.setMargin(new Insets(10, 2, 2, 2));
@@ -97,6 +99,7 @@ public class CoffeeAppWindow {
 		btnSmall.setBounds(27, 61, 100, 33);
 		orderPanel.add(btnSmall);
 
+		//When this button is pressed the getSize method returns Medium.
 		JToggleButton btnMedium = new JToggleButton("MEDIUM");
 		btnMedium.setBounds(new Rectangle(0, 0, 110, 35));
 		btnMedium.setMargin(new Insets(10, 2, 2, 2));
@@ -109,6 +112,7 @@ public class CoffeeAppWindow {
 		btnMedium.setBounds(161, 60, 110, 35);
 		orderPanel.add(btnMedium);
 
+		//When this button is pressed the getSize method returns Large.
 		JToggleButton btnLarge = new JToggleButton("LARGE");
 		btnLarge.setBounds(new Rectangle(0, 0, 110, 35));
 		btnLarge.setMargin(new Insets(10, 2, 2, 2));
@@ -121,6 +125,7 @@ public class CoffeeAppWindow {
 		btnLarge.setBounds(309, 60, 100, 35);
 		orderPanel.add(btnLarge);
 
+		//When this button is pressed the getType method returns Coffee.
 		JToggleButton btnCoffee = new JToggleButton("COFFEE");
 		btnCoffee.setMargin(new Insets(10, 2, 2, 2));
 		// btnCoffee.addActionListener(new ActionListener() {
@@ -131,6 +136,7 @@ public class CoffeeAppWindow {
 		btnCoffee.setBounds(6, 165, 133, 35);
 		orderPanel.add(btnCoffee);
 
+		//When this button is pressed the getType method returns Espresso.
 		JToggleButton btnEspresso = new JToggleButton("ESPRESSO");
 		btnEspresso.setMargin(new Insets(10, 2, 2, 2));
 		// btnEspresso.addActionListener(new ActionListener() {
@@ -141,6 +147,7 @@ public class CoffeeAppWindow {
 		btnEspresso.setBounds(299, 165, 133, 35);
 		orderPanel.add(btnEspresso);
 
+		//When this button is pressed the getType method returns Cappuccino.
 		JToggleButton btnCappuccino = new JToggleButton("CAPPUCCINO");
 		btnCappuccino.setMargin(new Insets(10, 2, 2, 2));
 		// btnCappuccino.addActionListener(new ActionListener() {
@@ -151,6 +158,7 @@ public class CoffeeAppWindow {
 		btnCappuccino.setBounds(148, 165, 145, 35);
 		orderPanel.add(btnCappuccino);
 
+		//When this button is pressed the getType method returns Frappuccino.
 		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
 		btnFrappuccino.setBounds(new Rectangle(150, 0, 0, 0));
 		btnFrappuccino.setMargin(new Insets(10, 2, 2, 2));
@@ -162,6 +170,7 @@ public class CoffeeAppWindow {
 		btnFrappuccino.setBounds(148, 202, 145, 35);
 		orderPanel.add(btnFrappuccino);
 
+		//When this button is pressed the getType method returns Iced Coffee.
 		JToggleButton btnIcedCoffee = new JToggleButton("ICED COFFEE");
 		btnIcedCoffee.setMargin(new Insets(10, 2, 2, 2));
 		btnIcedCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
@@ -172,6 +181,7 @@ public class CoffeeAppWindow {
 		// }
 		// });
 
+		//When this button is pressed the getType method returns Latte.
 		JToggleButton btnLatte = new JToggleButton("LATTE");
 		btnLatte.setMargin(new Insets(10, 2, 2, 2));
 		// btnLatte.addActionListener(new ActionListener() {
@@ -204,6 +214,7 @@ public class CoffeeAppWindow {
 		typeGroup.add(btnIcedCoffee);
 		typeGroup.add(btnCoffee);
 
+		//When the add button is pressed the user's selection for size and type are used to then calculate the price and create a Drink object.
 		JButton btnAdd = new JButton("ADD ");
 		btnAdd.setMargin(new Insets(7, 0, 0, 0));
 		btnAdd.addActionListener(new ActionListener() {
@@ -255,12 +266,15 @@ public class CoffeeAppWindow {
 		frame.getContentPane().add(cartPanel_1);
 		cartPanel_1.setLayout(null);
 		
+		//Pressing on the Cart button creates an ArrayList of order.
 		JButton btnCart = new JButton("CART");
 		btnCart.setMargin(new Insets(7, 0, 0, 0));
 		btnCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ArrayList<Drink> order = Order.getDrinkOrder();
-
+				
+				//Pressing the Cart button adds all of the different individual Drink objects, as well as their size, type, and price to a list.
+				//The list of all of the Drink objects ordered is shown to the user in a new panel called the cart panel.
 				for (int i = 0; i < order.size(); i++) {
 					Drink currentDrink = order.get(i);
 					String size = currentDrink.getSize();
@@ -268,11 +282,12 @@ public class CoffeeAppWindow {
 					double price = currentDrink.getPrice();
 					listModel.addElement(Order.formatOrderLines(size, type, Calculations.formatNumber(price)));
 				}
-
+				//Pressing the Cart button also allows the user to see the subtotal sales tax and their total price for their order.
 				subtotalField.setText(Calculations.getFormattedSubTotal());
 				taxField.setText(Calculations.getFormattedTax());
 				totalField.setText(Calculations.getFormattedTotal());
-
+				
+				//Pressing on the Cart button makes the order panel no longer visible. The cart panel is shown to the user.
 				orderPanel.setVisible(false);
 				cartPanel_1.setVisible(true);
 			}
@@ -282,12 +297,13 @@ public class CoffeeAppWindow {
 		orderPanel.add(btnCart);
 
 		
-
+		//The JList called orderList is where all of the Drink objects and their type, size, and price are shown to the customer.
 		JList<String> orderList = new JList<String>(listModel);
 		orderList.setFont(new Font("Courier New", Font.PLAIN, 11));
 		orderList.setBounds(78, 38, 276, 167);
 		cartPanel_1.add(orderList);
 
+		//This Back button allows the user to return to the order panel and makes the cart panel invisible.
 		JButton btnBack = new JButton("BACK");
 		btnBack.setRolloverEnabled(false);
 		btnBack.addActionListener(new ActionListener() {
@@ -300,6 +316,7 @@ public class CoffeeAppWindow {
 		btnBack.setBounds(44, 330, 117, 29);
 		cartPanel_1.add(btnBack);
 
+		//The delete button allows the user to clear one of the items from the list which details their order.
 		JButton btnDeleteItem = new JButton("DELETE ITEM");
 		btnDeleteItem.setRolloverEnabled(false);
 		btnDeleteItem.addActionListener(new ActionListener() {
@@ -311,6 +328,7 @@ public class CoffeeAppWindow {
 					listModel.removeElementAt(index);
 					Order.getDrinkOrder().remove(index);
 
+					//Once the item is deleted from the list the subtotal, sales tax, and total is recalculated.
 					subtotalField.setText(Calculations.getFormattedSubTotal());
 					taxField.setText(Calculations.getFormattedTax());
 					totalField.setText(Calculations.getFormattedTotal());
@@ -320,6 +338,7 @@ public class CoffeeAppWindow {
 		btnDeleteItem.setBounds(121, 217, 192, 29);
 		cartPanel_1.add(btnDeleteItem);
 
+		//When the user presses the Pay button a text file is created which details the order and acts as a receipt. 
 		JButton btnPay = new JButton("PAY");
 		btnPay.setRolloverEnabled(false);
 		btnPay.addActionListener(new ActionListener() {
@@ -385,6 +404,7 @@ public class CoffeeAppWindow {
 		lblPleaseReviewYour.setBounds(98, 17, 236, 16);
 		cartPanel_1.add(lblPleaseReviewYour);
 
+		//This creates a text field where the calculated subtotal (total without tax) is added.
 		subtotalField = new JTextField();
 		subtotalField.setBackground(Color.LIGHT_GRAY);
 		subtotalField.setHorizontalAlignment(SwingConstants.LEFT);
@@ -393,6 +413,7 @@ public class CoffeeAppWindow {
 		cartPanel_1.add(subtotalField);
 		subtotalField.setColumns(10);
 
+		//This creates a text field where the calculated sales tax is added.
 		taxField = new JTextField();
 		taxField.setBackground(Color.LIGHT_GRAY);
 		taxField.setHorizontalAlignment(SwingConstants.LEFT);
@@ -401,6 +422,7 @@ public class CoffeeAppWindow {
 		taxField.setBounds(224, 272, 66, 26);
 		cartPanel_1.add(taxField);
 
+		//This creates a text field where the calculated total price is added.
 		totalField = new JTextField();
 		totalField.setBackground(Color.LIGHT_GRAY);
 		totalField.setHorizontalAlignment(SwingConstants.LEFT);
@@ -409,16 +431,19 @@ public class CoffeeAppWindow {
 		totalField.setBounds(224, 302, 66, 26);
 		cartPanel_1.add(totalField);
 
+		//This creates a label where the Subtotal is displayed to the user.
 		JLabel lblSubtotal = new JLabel("Subtotal:");
 		lblSubtotal.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblSubtotal.setBounds(150, 251, 61, 16);
 		cartPanel_1.add(lblSubtotal);
 
+		//This creates a label where the sales tax is displayed to the user.
 		JLabel lblTax = new JLabel("Tax:");
 		lblTax.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblTax.setBounds(150, 277, 61, 16);
 		cartPanel_1.add(lblTax);
 
+		//This creates a label where the total price is displayed to the user.
 		JLabel lblTotal = new JLabel("Total:");
 		lblTotal.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblTotal.setBounds(150, 307, 61, 16);
