@@ -5,7 +5,7 @@ public class Order {
 	//The drinkOrder ArrayList is responsible for storing each individual drink order as well as their size, type, and price.
 	private static ArrayList<Drink> drinkOrder = new ArrayList<>();
 	
-	//This method is responsible for creating each Drink object. This method uses the Strings for drinkSize and drinkType in order to calculate the price of the Drink.
+	//This constructor is responsible for creating each Drink object. This method uses the Strings for drinkSize and drinkType in order to calculate the price of the Drink.
 	//Once the price is calculated the Drink object is created.
 	public static Drink createDrink(String drinkSize, String drinkType) {
 		double drinkPrice = Calculations.calculatePrice(drinkType) + Calculations.sizeUpCharge(drinkSize);

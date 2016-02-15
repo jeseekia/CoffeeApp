@@ -72,12 +72,16 @@ public class CoffeeAppWindow {
 		frame.setBounds(100, 100, 450, 387);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-
+		
+		//Create a listModel to be applied to the jList on cart screen
 		DefaultListModel<String> listModel = new DefaultListModel<String>();
+		
+		//These button groups only allow for one size option and one drink type option to be toggled at any point in time
 		ButtonGroup sizeGroup = new ButtonGroup();
 		ButtonGroup typeGroup = new ButtonGroup();
 
-//This is where the order panel is created. The order panel shows the users the different options for both the type of drink that they can order and the size of that drink.
+		//This is where the order panel is created. The order panel shows the users the different options for both the type of drink that they can order,
+		//and the size of that drink.
 		JPanel orderPanel = new JPanel();
 		orderPanel.setForeground(Color.WHITE);
 		orderPanel.setBackground(Color.LIGHT_GRAY);
@@ -90,11 +94,6 @@ public class CoffeeAppWindow {
 		btnSmall.setBounds(new Rectangle(0, 0, 110, 35));
 		btnSmall.setMargin(new Insets(10, 2, 2, 2));
 		btnSmall.setForeground(Color.DARK_GRAY);
-		// btnSmall.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		//
-		// }
-		// });
 		btnSmall.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
 		btnSmall.setBounds(27, 61, 100, 33);
 		orderPanel.add(btnSmall);
@@ -104,10 +103,6 @@ public class CoffeeAppWindow {
 		btnMedium.setBounds(new Rectangle(0, 0, 110, 35));
 		btnMedium.setMargin(new Insets(10, 2, 2, 2));
 		btnMedium.setForeground(Color.DARK_GRAY);
-		// btnMedium.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnMedium.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
 		btnMedium.setBounds(161, 60, 110, 35);
 		orderPanel.add(btnMedium);
@@ -117,10 +112,6 @@ public class CoffeeAppWindow {
 		btnLarge.setBounds(new Rectangle(0, 0, 110, 35));
 		btnLarge.setMargin(new Insets(10, 2, 2, 2));
 		btnLarge.setForeground(Color.DARK_GRAY);
-		// btnLarge.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnLarge.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
 		btnLarge.setBounds(309, 60, 100, 35);
 		orderPanel.add(btnLarge);
@@ -128,10 +119,6 @@ public class CoffeeAppWindow {
 		//When this button is pressed the getType method returns Coffee.
 		JToggleButton btnCoffee = new JToggleButton("COFFEE");
 		btnCoffee.setMargin(new Insets(10, 2, 2, 2));
-		// btnCoffee.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnCoffee.setBounds(6, 165, 133, 35);
 		orderPanel.add(btnCoffee);
@@ -139,10 +126,6 @@ public class CoffeeAppWindow {
 		//When this button is pressed the getType method returns Espresso.
 		JToggleButton btnEspresso = new JToggleButton("ESPRESSO");
 		btnEspresso.setMargin(new Insets(10, 2, 2, 2));
-		// btnEspresso.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnEspresso.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnEspresso.setBounds(299, 165, 133, 35);
 		orderPanel.add(btnEspresso);
@@ -150,10 +133,6 @@ public class CoffeeAppWindow {
 		//When this button is pressed the getType method returns Cappuccino.
 		JToggleButton btnCappuccino = new JToggleButton("CAPPUCCINO");
 		btnCappuccino.setMargin(new Insets(10, 2, 2, 2));
-		// btnCappuccino.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnCappuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnCappuccino.setBounds(148, 165, 145, 35);
 		orderPanel.add(btnCappuccino);
@@ -162,10 +141,6 @@ public class CoffeeAppWindow {
 		JToggleButton btnFrappuccino = new JToggleButton("FRAPPUCCINO");
 		btnFrappuccino.setBounds(new Rectangle(150, 0, 0, 0));
 		btnFrappuccino.setMargin(new Insets(10, 2, 2, 2));
-		// btnFrappuccino.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnFrappuccino.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnFrappuccino.setBounds(148, 202, 145, 35);
 		orderPanel.add(btnFrappuccino);
@@ -176,18 +151,10 @@ public class CoffeeAppWindow {
 		btnIcedCoffee.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnIcedCoffee.setBounds(6, 202, 133, 35);
 		orderPanel.add(btnIcedCoffee);
-		// btnIcedCoffee.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 
 		//When this button is pressed the getType method returns Latte.
 		JToggleButton btnLatte = new JToggleButton("LATTE");
 		btnLatte.setMargin(new Insets(10, 2, 2, 2));
-		// btnLatte.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent e) {
-		// }
-		// });
 		btnLatte.setFont(new Font("Hiragino Kaku Gothic ProN", Font.PLAIN, 13));
 		btnLatte.setBounds(299, 202, 133, 35);
 		orderPanel.add(btnLatte);
@@ -203,7 +170,8 @@ public class CoffeeAppWindow {
 		lblPleaseSelectYour_1.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 15));
 		lblPleaseSelectYour_1.setBounds(66, 128, 321, 25);
 		orderPanel.add(lblPleaseSelectYour_1);
-
+		
+		// Add the toggle buttons into their appropriate groups
 		sizeGroup.add(btnSmall);
 		sizeGroup.add(btnMedium);
 		sizeGroup.add(btnLarge);
@@ -219,10 +187,12 @@ public class CoffeeAppWindow {
 		btnAdd.setMargin(new Insets(7, 0, 0, 0));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				
+				// Initialize these variables to null so validation can occur to make sure both size and drink are selected
 				String sizeText = null;
 				String typeText = null;
-
+				
+				// If/Else used to determine which size option is selected and get that button's text
 				if (btnSmall.isSelected()) {
 					sizeText = btnSmall.getText();
 				} else if (btnMedium.isSelected()) {
@@ -231,6 +201,7 @@ public class CoffeeAppWindow {
 					sizeText = btnLarge.getText();
 				}
 
+				// If/Else used to determine which drink option is selected and get that button's text
 				if (btnCappuccino.isSelected()) {
 					typeText = btnCappuccino.getText();
 				} else if (btnCoffee.isSelected()) {
@@ -244,13 +215,16 @@ public class CoffeeAppWindow {
 				} else if (btnLatte.isSelected()) {
 					typeText = btnLatte.getText();
 				}
-
+				
+				// Validate to make sure a button from each group is toggled
 				if (sizeText == null || typeText == null) {
 					JOptionPane.showMessageDialog(null, "You must select both a size and drink item.");
 				} else {
-					Order.setDrinkOrder(Order.createDrink(sizeText, typeText));
+					// Call the methods from Order class that will create a drink object and store it in an ArrayList 
+					Order.setDrinkOrder(Order.createDrink(sizeText, typeText));		
 				}
-
+				
+				// Clears the selected toggle buttons
 				sizeGroup.clearSelection();
 				typeGroup.clearSelection();
 			}
@@ -258,7 +232,9 @@ public class CoffeeAppWindow {
 		btnAdd.setFont(new Font("Hiragino Kaku Gothic StdN", Font.PLAIN, 13));
 		btnAdd.setBounds(155, 259, 133, 40);
 		orderPanel.add(btnAdd);
-
+		
+		// Initialization of cart panel which displays buttons to delete an item, go back to previous screen, and pay. 
+		// Also includes a jList that displays the ordered items and fields for the subtotal, tax, and grand total
 		JPanel cartPanel_1 = new JPanel();
 		cartPanel_1.setBackground(Color.LIGHT_GRAY);
 		cartPanel_1.setVisible(false);
@@ -266,23 +242,29 @@ public class CoffeeAppWindow {
 		frame.getContentPane().add(cartPanel_1);
 		cartPanel_1.setLayout(null);
 		
-		//Pressing on the Cart button creates an ArrayList of order.
+		
 		JButton btnCart = new JButton("CART");
 		btnCart.setMargin(new Insets(7, 0, 0, 0));
 		btnCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				// Retrieve the ArrayList of Drink objects
 				ArrayList<Drink> order = Order.getDrinkOrder();
 				
-				//Pressing the Cart button adds all of the different individual Drink objects, as well as their size, type, and price to a list.
+				//Pressing the Cart button adds all of the different individual Drink objects, as well as their size, type, and price to a list by
+				//iterating through the ArrayList.
 				//The list of all of the Drink objects ordered is shown to the user in a new panel called the cart panel.
 				for (int i = 0; i < order.size(); i++) {
 					Drink currentDrink = order.get(i);
 					String size = currentDrink.getSize();
 					String type = currentDrink.getType();
 					double price = currentDrink.getPrice();
+					
+					// Pass the variables of each object to the formatter and add them to the jList
 					listModel.addElement(Order.formatOrderLines(size, type, Calculations.formatNumber(price)));
 				}
-				//Pressing the Cart button also allows the user to see the subtotal sales tax and their total price for their order.
+				//Pressing the Cart button also allows the user to see the subtotal sales tax and their total price for their order by displaying it
+				//in their respective fields
 				subtotalField.setText(Calculations.getFormattedSubTotal());
 				taxField.setText(Calculations.getFormattedTax());
 				totalField.setText(Calculations.getFormattedTotal());
@@ -298,6 +280,7 @@ public class CoffeeAppWindow {
 
 		
 		//The JList called orderList is where all of the Drink objects and their type, size, and price are shown to the customer.
+		//Uses the DefaultListModel that was initialized at beginning of program
 		JList<String> orderList = new JList<String>(listModel);
 		orderList.setFont(new Font("Courier New", Font.PLAIN, 11));
 		orderList.setBounds(78, 38, 276, 167);
@@ -310,18 +293,24 @@ public class CoffeeAppWindow {
 			public void actionPerformed(ActionEvent e) {
 				orderPanel.setVisible(true);
 				cartPanel_1.setVisible(false);
+				
+				// To ensure that the contents of the jList are updated if the user adds an item when they go back to order screen
 				listModel.clear();
 			}
 		});
 		btnBack.setBounds(44, 330, 117, 29);
 		cartPanel_1.add(btnBack);
 
-		//The delete button allows the user to clear one of the items from the list which details their order.
+		//The delete button allows the user to clear a selected item from the Jlist which details their order.
 		JButton btnDeleteItem = new JButton("DELETE ITEM");
 		btnDeleteItem.setRolloverEnabled(false);
 		btnDeleteItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				//Determine the index of the selected item
 				int index = orderList.getSelectedIndex();
+				
+				//Make sure that an item is selected. If it is remove the item from the list and also remove the Drink object from the ArrayList
 				if (index < 0) {
 					JOptionPane.showMessageDialog(null, "You must select an item to be deleted.");
 				} else {
@@ -347,10 +336,6 @@ public class CoffeeAppWindow {
 
 				Path p = Paths.get(fName);
 
-				// For some reason this feature gets rid of the Jlist when the
-				// program goes back to main screen
-				// JOptionPane.showMessageDialog(null, orderList, "Receipt", 1);
-
 				Path absPath = p.toAbsolutePath();
 
 				if (!Files.exists(absPath)) {
@@ -368,11 +353,14 @@ public class CoffeeAppWindow {
 					File receiptTextFile = absPath.toFile();
 
 					writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("receipt.txt"), "utf-8"));
-
+					
+					// Make sure that an object exists in the arraylist or an element is on the jList
 					if (listModel.size() == 0 || Order.getDrinkOrder().isEmpty()) {
 						JOptionPane.showMessageDialog(null, "There aren't any items in the order.");
 					} else {
 						JOptionPane.showMessageDialog(null, "Thank you!");
+						
+						// Write the lines of teh order to the receipt.txt file followed by some blank lines and then the totals information
 						for (int i = 0; i < listModel.size(); i++) {
 							writer.write(listModel.elementAt(i).toString() + "\n");
 						}
@@ -380,15 +368,18 @@ public class CoffeeAppWindow {
 						writer.write("Subtotal:  " + Calculations.getFormattedSubTotal() + "\n");
 						writer.write("Tax:       " + Calculations.getFormattedTax() + "\n");
 						writer.write("Total:     " + Calculations.getFormattedTotal() + "\n");
-
-						orderPanel.setVisible(true);
-						cartPanel_1.setVisible(false);
+						
+						//Clear the contents of the jList and the ArrayList so a new order can be processed
 						Order.getDrinkOrder().clear();
 						listModel.clear();
 						writer.close();
 
 					}
-
+					
+					//Hide the cart panel and make the order panel visible again
+					orderPanel.setVisible(true);
+					cartPanel_1.setVisible(false);
+					
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "File Creation Error!");
 				}
