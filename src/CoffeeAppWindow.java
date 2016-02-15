@@ -39,7 +39,13 @@ public class CoffeeAppWindow {
 	private JTextField totalField;
 
 	/**
-	 * Launch the application.
+	 * This application is a simulation of a POS System for a Coffee Business.
+	 * It allows the client of the Coffee Barista to select a type of beverage, customize size and
+	 * add drinks to their Order list. 
+	 * Once they have finished, they have the option to go to their "cart" to review their order, 
+	 * they can delete items, go back to the "order Panel" and add more.
+	 * In the "cart Panel" they will be able to preview their subtotal, tax and total before paying.
+	 * Authors: Jeseekia Vaughn, Diana Miller, Luke Jarmolowicz, Austin Jordan.
 	 */
 
 	public static void main(String[] args) {
